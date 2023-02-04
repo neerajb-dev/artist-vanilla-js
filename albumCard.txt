@@ -1,0 +1,16 @@
+<div class="col">
+                <div class="card text-bg-dark"
+                    style="max-width: 300px; max-height: 300px;  min-width: 150px; min-height: 150px;">
+                    <img src="" class="card-img" alt="...">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Album Name</h5>
+                        <p class="card-text">Artist Name</p>
+                        <button class="btn btn-outline-light edit">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                        <button class="btn btn-outline-light delete">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
