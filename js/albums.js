@@ -89,6 +89,7 @@ function createNewAlbum(newAlbum) {
 }
 
 async function updateAlbum(updatedAlbum) {
+    // console.log(updatedAlbum)
     albums = albums.map(album => album.id === updatedAlbum.id ? updatedAlbum : album)
     localStorage.setItem('albums', JSON.stringify(albums))
     const cardTitle = selectedCard.children[0].children[1].firstElementChild
@@ -114,7 +115,7 @@ document.querySelector('#album-list').addEventListener('click', function (e) {
         selectedCard = target.parentElement.parentElement.parentElement.parentElement
         deleteAlbum(selectedCard.id)
     }
-    if (target.classList.contains('edit') || target.classList.contains('fa-pen')) {
+    if (target.classList.contains('edit')) {
         selectedCard = target.parentElement.parentElement.parentElement
         editAlbum(selectedCard.id)
     }
