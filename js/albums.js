@@ -11,6 +11,7 @@ let albumData = {
 }
 
 const addAlbumBtn = document.getElementById('add-new-album')
+const clearFormBtn = document.getElementById('clear-form')
 
 window.addEventListener('DOMContentLoaded', function () {
     fetchArtistsFromLocal()
@@ -22,6 +23,11 @@ function clearFields() {
     document.getElementById('album-input').value = ''
     document.getElementById('album-art').value = ''
 }
+
+clearFormBtn.addEventListener('click', function () {
+    clearFields()
+    albumData = {}
+})
 
 function fetchAlbumsFromLocal() {
     const albumsFromLocal = JSON.parse(localStorage.getItem('albums'))
@@ -102,6 +108,7 @@ async function updateAlbum(updatedAlbum) {
     addAlbumBtn.classList.replace('btn-warning', 'btn-primary')
     isEdit = false
     selectedCard = null
+    albumData = {}
 }
 
 // delete album
